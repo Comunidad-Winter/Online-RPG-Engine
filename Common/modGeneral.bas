@@ -34,17 +34,8 @@ Attribute VB_Name = "modGeneral"
 '               - SC Description Here
 '*****************************************************************
 '
-'Juan Martín Sotuyo Dodero (juansotuyo@hotmail.com) - 8/25/2004
-'   - Add: General_Convert_Radians_To_Degrees method
-'   - Add: General_Drive_Get_Free_Bytes method
-'   - Add: General_Write_To_TextBox method
-'   - Fix: A spelling mistake in General_Convert_Degrees_To_Radians (used to say Covert)
-'
-'Juan Martín Sotuyo Dodero (juansotuyo@hotmail.com) - 2/19/2003
-'   - Add: General_Long_Color_To_RGB method
-'
-'Aaron Perkins(aaron@baronsoft.com) - 5/14/2002
-'   - Still in Test Phase
+'Aaron Perkins(aaron@baronsoft.com) - 8/04/2003
+'   - First Release
 '*****************************************************************
 Option Explicit
 
@@ -65,14 +56,11 @@ Private Declare Function QueryPerformanceFrequency Lib "kernel32" (lpFrequency A
 Private Declare Function QueryPerformanceCounter Lib "kernel32" (lpPerformanceCount As Currency) As Long
 
 'For making a form always on top
-Private Declare Function SetWindowPos Lib "user32" (ByVal hwnd As Long, ByVal hWndInsertAfter As Long, ByVal X As Long, ByVal Y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
+Private Declare Function SetWindowPos Lib "user32" (ByVal hWnd As Long, ByVal hWndInsertAfter As Long, ByVal x As Long, ByVal y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
 Private Const HWND_TOPMOST = -1
 Private Const HWND_NOTOPMOST = -2
 Private Const SWP_NOACTIVATE = &H10
 Private Const SWP_SHOWWINDOW = &H40
-
-'To get free bytes in drive
-Private Declare Function GetDiskFreeSpace Lib "kernel32" Alias "GetDiskFreeSpaceExA" (ByVal lpRootPathName As String, FreeBytesToCaller As Currency, BytesTotal As Currency, FreeBytesTotal As Currency) As Long
 
 Public Function General_File_Exists(ByVal file_path As String, ByVal file_type As VbFileAttribute) As Boolean
 '*****************************************************************
@@ -105,7 +93,7 @@ Public Function General_Var_Get(ByVal file As String, ByVal Main As String, ByVa
     getprivateprofilestring Main, var, szReturn, sSpaces, Len(sSpaces), file
     
     General_Var_Get = RTrim$(sSpaces)
-    General_Var_Get = Left$(General_Var_Get, Len(General_Var_Get) - 1)
+    General_Var_Get = left$(General_Var_Get, Len(General_Var_Get) - 1)
 End Function
 
 Public Sub General_Var_Write(ByVal file As String, ByVal Main As String, ByVal var As String, ByVal value As String)
@@ -126,7 +114,6 @@ Public Function General_Field_Read(ByVal field_pos As Long, ByVal text As String
     Dim i As Long
     Dim LastPos As Long
     Dim FieldNum As Long
-    
     LastPos = 0
     FieldNum = 0
     For i = 1 To Len(text)
@@ -143,37 +130,6 @@ Public Function General_Field_Read(ByVal field_pos As Long, ByVal text As String
     If FieldNum = field_pos Then
         General_Field_Read = Mid$(text, LastPos + 1)
     End If
-End Function
-
-Public Function General_Field_Read_GUMP(ByVal field_pos As Long, ByVal text As String, ByVal delimiter As Byte) As String
-'*****************************************************************
-'Author: Aaron Perkins
-'Last Modify Date: 10/07/2002
-'Gets a field from a delimited string
-'*****************************************************************
-    Dim i As Long
-    Dim LastPos As Long
-    Dim FieldNum As Long
-    On Error GoTo ErrHandler
-    
-    LastPos = 0
-    FieldNum = 0
-    For i = 1 To Len(text)
-        If delimiter = CByte(Asc(Mid$(text, i, 1))) Then
-            FieldNum = FieldNum + 1
-            If FieldNum = field_pos Then
-                General_Field_Read_GUMP = Mid$(text, LastPos + 1, (InStr(LastPos + 1, text, Chr$(delimiter), vbTextCompare) - 1) - (LastPos))
-                Exit Function
-            End If
-            LastPos = i
-        End If
-    Next i
-    FieldNum = FieldNum + 1
-    If FieldNum = field_pos Then
-        General_Field_Read_GUMP = Mid$(text, LastPos + 1)
-    End If
-ErrHandler:
-    General_Field_Read_GUMP = ""
 End Function
 
 Public Function General_Field_Count(ByVal text As String, ByVal delimiter As Byte) As Long
@@ -204,7 +160,7 @@ Public Function General_Random_Number(ByVal LowerBound As Long, ByVal UpperBound
 'Find a Random number between a range
 '*****************************************************************
     Randomize Timer
-    General_Random_Number = (UpperBound - LowerBound) * Rnd + LowerBound
+    General_Random_Number = (UpperBound - LowerBound + 1) * Rnd + LowerBound
 End Function
 
 Public Sub General_Sleep(ByVal length As Double)
@@ -259,17 +215,17 @@ Public Function General_String_Is_Alphanumeric(ByVal test_string As String) As B
 'Alows no special characters. Only letters, numbers, and spaces
 '**************************************************************
     'Check Name
-    Dim LoopC As Long
+    Dim loopc As Long
     Dim ts As Byte
-    For LoopC = 1 To Len(test_string)
-        ts = Asc(Mid(test_string, LoopC))
+    For loopc = 1 To Len(test_string)
+        ts = Asc(Mid(test_string, loopc))
         If ts = 32 Or (ts >= 48 And ts <= 57) Or (ts >= 65 And ts <= 90) Or (ts >= 96 And ts <= 122) Then
             General_String_Is_Alphanumeric = True
         Else
             General_String_Is_Alphanumeric = False
             Exit Function
         End If
-    Next LoopC
+    Next loopc
 End Function
 
 Public Sub General_Form_On_Top_Set(ByRef s_form As Form, Optional ByVal s_on_top As Boolean = False)
@@ -284,25 +240,16 @@ Public Sub General_Form_On_Top_Set(ByRef s_form As Form, Optional ByVal s_on_top
     Else
         hwnd_flag = HWND_NOTOPMOST
     End If
-    SetWindowPos s_form.hwnd, hwnd_flag, s_form.Left / Screen.TwipsPerPixelX, s_form.Top / Screen.TwipsPerPixelY, s_form.Width / Screen.TwipsPerPixelX, s_form.Height / Screen.TwipsPerPixelY, SWP_NOACTIVATE Or SWP_SHOWWINDOW
+    SetWindowPos s_form.hWnd, hwnd_flag, s_form.left / Screen.TwipsPerPixelX, s_form.top / Screen.TwipsPerPixelY, s_form.width / Screen.TwipsPerPixelX, s_form.height / Screen.TwipsPerPixelY, SWP_NOACTIVATE Or SWP_SHOWWINDOW
 End Sub
 
-Public Function General_Convert_Degrees_To_Radians(ByRef s_degree As Single) As Single
+Public Function General_Covert_Degrees_To_Radians(s_degree As Single) As Single
 '**************************************************************
 'Author: Aaron Perkins
 'Last Modify Date: 5/12/2003
 'Converts a degree to a radian
 '**************************************************************
-    General_Convert_Degrees_To_Radians = (s_degree * PI) / 180
-End Function
-
-Public Function General_Convert_Radians_To_Degrees(ByRef s_radians As Single) As Integer
-'**************************************************************
-'Author: Juan Martín Sotuyo Dodero
-'Last Modify Date: 8/25/2004
-'Converts a radian to degrees
-'**************************************************************
-    General_Convert_Radians_To_Degrees = (s_radians * 180) / PI
+    General_Covert_Degrees_To_Radians = (s_degree * PI) / 180
 End Function
 
 Public Function General_Distance(ByVal x1 As Long, ByVal y1 As Long, ByVal x2 As Long, ByVal y2 As Long) As Single
@@ -313,48 +260,3 @@ Public Function General_Distance(ByVal x1 As Long, ByVal y1 As Long, ByVal x2 As
 '**************************************************************
     General_Distance = Sqr((x2 - x1) ^ 2 + (y2 - y1) ^ 2)
 End Function
-
-Public Sub General_Long_Color_to_RGB(ByVal long_color As Long, ByRef red As Integer, ByRef green As Integer, ByRef blue As Integer)
-'***********************************
-'Coded by Juan Martín Sotuyo Dodero (juansotuyo@hotmail.com)
-'Last Modified: 2/19/03
-'Takes a long value and separates RGB values to the given variables
-'***********************************
-    Dim temp_color As String
-    
-    temp_color = Hex(long_color)
-    If Len(temp_color) < 6 Then
-        'Give is 6 digits for easy RGB conversion.
-        temp_color = String(6 - Len(temp_color), "0") + temp_color
-    End If
-    
-    red = CLng("&H" + Mid(temp_color, 1, 2))
-    green = CLng("&H" + Mid(temp_color, 3, 2))
-    blue = CLng("&H" + Mid(temp_color, 5, 2))
-
-End Sub
-
-Public Function General_Drive_Get_Free_Bytes(ByVal DriveName As String) As Currency
-'**************************************************************
-'Author: Juan Martín Sotuyo Dodero
-'Last Modify Date: 6/07/2004
-'
-'**************************************************************
-    Dim retval As Long
-    Dim FB As Currency
-    Dim BT As Currency
-    Dim FBT As Currency
-    
-    retval = GetDiskFreeSpace(Left(DriveName, 2), FB, BT, FBT)
-    
-    General_Drive_Get_Free_Bytes = FB * 10000 'convert result to actual size in bytes
-End Function
-
-Public Sub General_Write_To_TextBox(ByVal TextBox As TextBox, ByVal text As String)
-'**************************************************************
-'Author: juan Martín Sotuyo Dodero
-'Last Modify Date: 8/14/2004
-'
-'**************************************************************
-    TextBox.text = TextBox.text & vbNewLine & text
-End Sub

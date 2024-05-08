@@ -1,0 +1,8 @@
+frmMain = 75, 213, 1181, 1030, C, 35, 17, 964, 783, C
+clsTileEngineX = 8, 47, 1078, 997, C
+ctlDirectPlayClient = 101, 125, 1049, 913, C, 44, 44, 749, 656, C
+modCommunicationCommands = 70, 28, 1029, 750, C
+modGeneral = 16, 15, 1105, 801, C
+frmConnect = 189, 257, 1125, 979, C, 46, 38, 291, 413, C
+frmNewPlayer = 283, 86, 1219, 887, C, 204, 217, 599, 939, C
+clsSoundEngine = 179, 173, 1130, 895, C

@@ -1,0 +1,13 @@
+frmMain = 92, 5, 1267, 929, C, 270, 78, 675, 682, C
+ctlDirectPlayServer = 60, 62, 1253, 970, C, 264, 77, 911, 681, C
+clsList = 142, 37, 910, 846, C
+clsPlayer = 331, 20, 1236, 976, C
+modCommunicationCommands = 313, 62, 1036, 674, C
+clsMap = 166, 3, 1300, 888, C
+clsMapTile = 38, 7, 1098, 926, C
+clsChar = 198, 198, 919, 810, C
+clsScriptEngine = 165, 272, 1075, 884, C
+clsScriptInterface = 254, 42, 1257, 780, C
+clsScriptCommand = 103, 248, 808, 860, C
+modGeneral = 264, 265, 969, 876, C
+clsNPC = 12, 58, 966, 780, C

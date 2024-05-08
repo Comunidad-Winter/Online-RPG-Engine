@@ -42,13 +42,12 @@ Attribute VB_Exposed = False
 '    XX/XX/200X - Your Name Here (Your Email Here)
 '       - Your Description Here
 '       Sub Release Contributors:
-'           XX/XX/200X - Sub Contributor Name Here (SC Email Here)
+'           XX/XX/2003 - Sub Contributor Name Here (SC Email Here)
 '               - SC Description Here
 '*****************************************************************
 'Aaron Perkins(aaron@baronsoft.com) - 5/12/2003
 '   -Add: UpperBound, LowerBound
 '   -Add: Remove_Index, Update_Index
-'
 'Aaron Perkins(aaron@baronsoft.com) - 2/28/2003
 '   -First Release
 '*****************************************************************
@@ -76,10 +75,10 @@ Private Sub Class_Terminate()
 '
 '**************************************************************
     'Destory all objects in list
-    Dim LoopC As Long
-    For LoopC = LowerBound To UpperBound
-        Set list(LoopC) = Nothing
-    Next LoopC
+    Dim loopc As Long
+    For loopc = LowerBound To UpperBound
+        Set list(loopc) = Nothing
+    Next loopc
 End Sub
 
 Private Function List_Next_Open() As Long
@@ -89,18 +88,18 @@ Private Function List_Next_Open() As Long
 'Returns the next open index
 '*****************************************************************
 On Error GoTo ErrorHandler:
-    Dim LoopC As Long
+    Dim loopc As Long
     
-    LoopC = 1
-    Do Until list(LoopC) Is Nothing
-        If LoopC = list_last Then
+    loopc = 1
+    Do Until list(loopc) Is Nothing
+        If loopc = list_last Then
             List_Next_Open = list_last + 1
             Exit Function
         End If
-        LoopC = LoopC + 1
+        loopc = loopc + 1
     Loop
     
-    List_Next_Open = LoopC
+    List_Next_Open = loopc
 Exit Function
 ErrorHandler:
     List_Next_Open = 1
@@ -134,11 +133,11 @@ Public Function Find(ByVal item_property As String, ByVal property_value As Vari
 'Last Modify Date: 1/29/2003
 'Find and return an object by it's property
 '*****************************************************************
-    Dim Index As Long
-    Index = Find_Index(item_property, property_value)
+    Dim index As Long
+    index = Find_Index(item_property, property_value)
     
-    If Index <> 0 Then
-        Set Find = list(Index)
+    If index <> 0 Then
+        Set Find = list(index)
     Else
         Set Find = Nothing
     End If
@@ -151,25 +150,25 @@ Public Function Find_Index(ByVal property As String, ByVal value As Variant) As 
 'Find and return an index to a object by it's property
 '*****************************************************************
 On Error GoTo ErrorHandler:
-    Dim LoopC As Long
+    Dim loopc As Long
     Dim tempvalue As Variant
     
-    LoopC = 1
-    If Not (list(LoopC) Is Nothing) Then
-        tempvalue = CallByName(list(LoopC), property, VbGet)
+    loopc = 1
+    If Not (list(loopc) Is Nothing) Then
+        tempvalue = CallByName(list(loopc), property, VbGet)
     End If
     Do Until tempvalue = value
-        If LoopC = list_last Then
+        If loopc = list_last Then
             Find_Index = 0
             Exit Function
         End If
-        LoopC = LoopC + 1
-        If Not (list(LoopC) Is Nothing) Then
-             tempvalue = CallByName(list(LoopC), property, VbGet)
+        loopc = loopc + 1
+        If Not (list(loopc) Is Nothing) Then
+             tempvalue = CallByName(list(loopc), property, VbGet)
         End If
     Loop
     
-    Find_Index = LoopC
+    Find_Index = loopc
 Exit Function
 ErrorHandler:
     Find_Index = 0
@@ -181,33 +180,33 @@ Public Sub Update(ByVal item_property As String, ByVal property_value As Variant
 'Last Modify Date: 1/29/2003
 'Replace one object with another
 '*****************************************************************
-    Dim Index As Long
-    Index = Find_Index(item_property, property_value)
+    Dim index As Long
+    index = Find_Index(item_property, property_value)
     
-    If Index <> 0 Then
-        Update_Index Index, obj
+    If index <> 0 Then
+        Update_Index index, obj
     End If
 End Sub
 
-Public Sub Update_Index(ByVal Index As Long, ByRef obj As Object)
+Public Sub Update_Index(ByVal index As Long, ByRef obj As Object)
 '*****************************************************************
 'Author: Aaron Perkins
 'Last Modify Date: 5/9/2003
 'Replace one object with another
 '*****************************************************************
-    If Index <> 0 Then
-        Set list(Index) = obj
+    If index <> 0 Then
+        Set list(index) = obj
     End If
 End Sub
 
-Public Function Item(ByVal Index As Long) As Object
+Public Function Item(ByVal index As Long) As Object
 '*****************************************************************
 'Author: Aaron Perkins
 'Last Modify Date: 1/29/2003
 'Return and object by its index
 '*****************************************************************
-    If Index <> 0 Then
-        Set Item = list(Index)
+    If index <> 0 Then
+        Set Item = list(index)
     Else
         Set Item = Nothing
     End If
@@ -219,25 +218,25 @@ Public Sub Remove(ByVal item_property As String, ByVal property_value As Variant
 'Last Modify Date: 1/29/2003
 'Remove an object
 '*****************************************************************
-    Dim Index As Long
-    Index = Find_Index(item_property, property_value)
+    Dim index As Long
+    index = Find_Index(item_property, property_value)
 
-    If Index <> 0 Then
-        Remove_Index Index
+    If index <> 0 Then
+        Remove_Index index
     End If
 End Sub
 
-Public Sub Remove_Index(ByVal Index As Long)
+Public Sub Remove_Index(ByVal index As Long)
 '*****************************************************************
 'Author: Aaron Perkins
 'Last Modify Date: 5/9/2003
 'Remove an object
 '*****************************************************************
-    If Index <> 0 Then
+    If index <> 0 Then
         'Destroy object
-        Set list(Index) = Nothing
+        Set list(index) = Nothing
         'Update array size
-        If Index = list_last Then
+        If index = list_last Then
             Do Until Not (list(list_last) Is Nothing)
                 list_last = list_last - 1
                 If list_last = 0 Then
