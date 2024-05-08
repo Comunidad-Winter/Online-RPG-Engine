@@ -1,0 +1,14 @@
+clsTileEngineX = 0, 0, 756, 689, C
+ctlDirectPlayClient = 0, 0, 756, 686, C, 12, 62, 355, 303, C
+modCommunicationCommands = 0, 0, 758, 685, C
+modGeneral = 0, 0, 756, 694, C
+modDeclares = 0, 0, 756, 694, C
+frmMain = 0, 0, 756, 693, C, 0, 0, 756, 694, C
+modWindows = 0, 0, 756, 694, C
+clsCharacterCreation = 3, 12, 385, 384, C
+modGame = 2, 0, 756, 694, C
+clsChats = 0, 0, 532, 482, C
+modCompression = 110, 110, 648, 576, C
+clsGui = 0, 0, 545, 474, C
+clsSoundEngine = 0, 0, 0, 0, C
+clsVideoEngine = 0, 0, 0, 0, C

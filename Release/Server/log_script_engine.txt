@@ -1,0 +1,50 @@
+08/11/2004 03:50:03 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 03:59:51 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\main.vbs
+08/11/2004 03:59:51 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\tile_events.vbs
+08/11/2004 03:59:51 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\npc_ai.vbs
+08/11/2004 03:59:51 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\gump.vbs
+08/11/2004 04:01:04 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:01:04 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:01:06 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:01:09 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:01:10 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:01:11 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:01:28 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:31:02 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:02 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:02 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:02 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:02 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:03 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:03 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:03 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:03 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:03 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:14 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:18 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:18 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:21 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:35 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:35 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:35 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:35 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:36 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:36 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:36 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:39 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:31:40 p.m. - clsScriptEngine - Execute_With_Parameters - Script Error - Number: -2146074272 - Description: Automation error - Line: 28 - Text: 
+08/11/2004 04:55:20 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\main.vbs
+08/11/2004 04:55:20 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\tile_events.vbs
+08/11/2004 04:55:20 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\npc_ai.vbs
+08/11/2004 04:55:20 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\gump.vbs
+08/11/2004 04:55:54 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\main.vbs
+08/11/2004 04:55:54 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\tile_events.vbs
+08/11/2004 04:55:54 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\npc_ai.vbs
+08/11/2004 04:55:54 p.m. - clsScriptEngine - Load_From_File - Error - Description: Script path not found. F:\MIS DOCUMENTOS\PROGRAMACIÛN\VISUAL BASIC\DSO\ORE 1.0\ORE 1.0A1\RELEASE\SERVER\..\Resources\scripts\gump.vbs
+08/11/2004 04:56:47 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:58:55 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:58:56 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:59:03 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+08/11/2004 04:59:03 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+09/11/2004 04:13:09 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method
+09/11/2004 04:13:19 p.m. - clsScriptEngine - Execute - Unhandled Error - Number:438 - Description: Object doesn't support this property or method

@@ -1,0 +1,27 @@
+[INIT]
+NumTriggers=6
+
+'Trigger´s descriptions are just for you, don´t write one if you don´t want
+
+[TRIG1]
+Name=NONE
+
+[TRIG2]
+Name=Silt
+'GMs may walk over, possibly boats too
+
+[TRIG3]
+Name=Shoot-Blocked
+'Can´t shoot over
+
+[TRIG4]
+Name=Destroy layer 4
+'Doesn´t render graphics on layer 4 (roofs, higher parts of the walls) 
+
+[TRIG5]
+Name=NPC Free Zone
+'No NPC may step over this tile
+
+[TRIG6]
+Name=Non Combat Zone
+'Neither users nor NPCs can attack
